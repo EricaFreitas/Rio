@@ -8,14 +8,14 @@ h1 {
  
         #banner {
             width: 100%;
-            height: 100px;
-            background-color: #572e08;
+            height: 150px;
             color: #000000;
             text-align: center;
-            line-height: 100px;
+            line-height: 135px;
             position: relative;
             overflow: hidden;
             font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         #mensagem {
@@ -36,4 +36,8 @@ h1 {
           width: 300px; /* Defina a largura desejada para as imagens */
           margin-right: 20px; /* Adicione um espaço entre as imagens (opcional) */
           margin-top: 20px; /* adiciona espaco entre o paragrafo de cima*/
+      }
+      p {
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       }
