@@ -7,6 +7,7 @@ h1 {
   }
  
         #banner {
+          background-color: rgb(88, 179, 240);
             width: 100%;
             height: 150px;
             color: #000000;
@@ -40,4 +41,9 @@ h1 {
       p {
         font-size: 18px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      #img1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
       }
