@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(219, 230, 247);
+}
 h1 {
     color: #953456;
     font-size: 20px;
@@ -46,4 +49,16 @@ h1 {
         position: absolute;
         width: 100px;
         height: 100px;
+      }
+      #personagem{
+        width: 350px;
+        height: 350px;
+        padding-top: 80px;
+      }
+      form{
+        margin: 40px 0;
+      }
+      form label, form legend{
+        font-size: 20px;
+        margin: 0 0 10px;
       }
