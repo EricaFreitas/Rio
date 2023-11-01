@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="banner">
+        <div id="mensagem">Descubra a História por Trás do Filme Rio</div>
+        <img src="imagemRio.png" alt="filme rio" id="img1">
+    </div>
+    <div class="cabeca"> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Cadastrar Personagem (P. Inicial)</a></li>
+                <li><a href="desconto.html">Calcular Desconto</a></li>
+                <li><a href="cadastroUsuario.html">Cadastro de Usuário</a></li>
+                <li><a href="nivelSatisfacao.html">Satisfação</a></li>
+
+            </ul>
+        </nav>
+        </div>
+        <h1>Cadastro Usuário</h1>
+        <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"><br><br>
+
+        <p id="genero">Qual seu personagem preferido?</p>
+        <div class="texto">
+        <input type="radio" name="personagem" value="romance">Nico<br>
+        <input type="radio" name="personagem" value="terror">Pedro<br>
+        <input type="radio" name="personagem" value="suspense">Blue<br>
+        <input type="radio" name="personagem" value="conto">Eduardo<br>
+        <input type="radio" name="personagem" value="poema">Jade<br>
+        <input type="radio" name="personagem" value="cronica">Rafael<br>
+        <input type="radio" name="personagem" value="cronica">Luis<br>
+        <input type="radio" name="personagem" value="cronica">Tiago<br>
+        </div>
+
+        <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
+    </form>
+
+        <div id="mensagem"></div>
+
+        <script>
+        var mensagemElement = document.getElementById("mensagem");
+        var bannerWidth = document.getElementById("banner").offsetWidth;
+        var imagem = document.getElementById("img1");
+
+        function animarMensagem() {
+            var left = -900; 
+            var interval = setInterval(function() {
+                left += 5; 
+                mensagemElement.style.left = left + "px";
+            imagem.style.left = (left + 710) + "px";
+    
+                if (left >= bannerWidth) {
+                    clearInterval(interval);
+                    setTimeout(function() {
+                        mensagemElement.style.left = "-900px";
+                        imagem.style.left = "-900px"; 
+                        animarMensagem(); 
+                    }, 1000); 
+                }
+            }, 30); 
+        }
+    
+        animarMensagem();
+
+        function cadastrarUsuario(){
+                var nome = document.getElementById("nome").value;
+                var email = document.getElementById("email").value;
+                var senha = document.getElementById("senha").value;
+            
+            if (nome === "" || email ==="" || senha ==="") {
+                document.getElementById("mensagem").innerHTML= "Por favor, preencha todos os campos."
+                return;
+            }
+    
+        var usuario = {
+            nome: nome,
+            email: email,
+            senha: senha
+        };
+    
+        console.log("Usuário cadastrado: ", usuario);
+    
+        document.getElementById("cadastroForm").reset();
+        document.getElementById("mensagem").innerHTML= "Cadastro realizado com sucesso";
+        }
+        </script>
+    
+</body>
+</html>

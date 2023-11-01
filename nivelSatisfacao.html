@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível de Satisfação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="banner">
+        <div id="mensagem">Descubra a História por Trás do Filme Rio</div>
+        <img src="imagemRio.png" alt="filme rio" id="img1">
+    </div>
+    <div class="cabeca"> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Cadastrar Personagem (P. Inicial)</a></li>
+                <li><a href="desconto.html">Calcular Desconto</a></li>
+                <li><a href="cadastroUsuario.html">Cadastro de Usuário</a></li>
+                <li><a href="nivelSatisfacao.html">Satisfação</a></li>
+
+            </ul>
+        </nav>
+        </div>
+        <form id="forms">
+            Defina seu nível de satisfação:<br>
+            Pouco satisfeito
+            <input type="range" name="satisfacao" min="0" max="10">
+            Muito satisfeito
+            <br>
+        <input type="button" value="Clique Aqui" onclick="msg()">
+        <script>
+         function msg() {
+         alert("Satisfação Enviada!");
+                }
+        var mensagemElement = document.getElementById("mensagem");
+        var bannerWidth = document.getElementById("banner").offsetWidth;
+        var imagem = document.getElementById("img1");
+
+        function animarMensagem() {
+            var left = -900; 
+            var interval = setInterval(function() {
+                left += 5; 
+                mensagemElement.style.left = left + "px";
+            imagem.style.left = (left + 710) + "px";
+    
+                if (left >= bannerWidth) {
+                    clearInterval(interval);
+                    setTimeout(function() {
+                        mensagemElement.style.left = "-900px";
+                        imagem.style.left = "-900px"; 
+                        animarMensagem(); 
+                    }, 1000); 
+                }
+            }, 30); 
+        }
+    
+        animarMensagem();
+        </script>
+</body>
+</html>

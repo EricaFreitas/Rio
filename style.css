@@ -1,9 +1,37 @@
+
 body{
   background-color: rgb(219, 230, 247);
 }
+.cabeca{
+  position: relative;
+  width: 2000px;
+  margin: 0 auto;
+  font-size: 35px;
+  padding-left: 15%;
+}
+nav{
+  top: 110px;
+  right: 0;
+}
+nav li{
+  display: inline;
+  margin: 0 0 0 15px;
+}
+nav a{
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+nav a:hover{
+  color: #C78C19;
+  text-decoration: underline;
+}
 h1 {
-    color: #953456;
-    font-size: 20px;
+  padding-top: 2%;
+    color: #180109;
+    font-size: 30px;
   }  
   .imagensCafe{
     text-align: center;
@@ -61,4 +89,17 @@ h1 {
       form label, form legend{
         font-size: 20px;
         margin: 0 0 10px;
+      }
+      p{
+
+        font-size: 30px;
+        font-weight: bold;
+      }
+      #p1 {
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      #forms {
+        font-size: 22px;
+        font-weight: bold;
       }
